@@ -102,7 +102,7 @@ final class _WP_Editors {
 			)
 		);
 
-		self::$this_tinymce = ( $set['tinymce'] && user_can_richedit() );
+		self::$this_tinymce = ( $set['tinymce'] && true );
 
 		if ( self::$this_tinymce ) {
 			if ( false !== strpos( $editor_id, '[' ) ) {
@@ -921,7 +921,7 @@ final class _WP_Editors {
 	 * @since 4.8.0
 	 */
 	public static function print_default_editor_scripts() {
-		$user_can_richedit = user_can_richedit();
+		$user_can_richedit = true;
 
 		if ( $user_can_richedit ) {
 			$settings = self::default_settings();
